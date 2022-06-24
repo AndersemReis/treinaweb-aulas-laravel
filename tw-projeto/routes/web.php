@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/servico/{id}', function (int $id) {
+    $servico = [
+        1=> [
+            'nome' => 'Lavagem de urso',
+            'descricao' => 'Descriçao muito longa'
+        ],
+        2=> [
+            'nome' => 'Lavagem de Cobertor',
+            'descricao' => 'Descriçao muito longa'
+        ],
+        3=> [
+            'nome' => 'Lavagem de Lençol',
+            'descricao' => 'Descriçao curta'
+        ],
+    ];
+    echo $servico[$id]['nome'];
+    echo "<br>";
+    echo $servico[$id]['descricao'];
+
+});
+
+route::get('/saudacao/{nome?}', function( string $nome = 'Treinaweb'){
+    echo "ola $nome";
+});

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\Saudacao;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\SiteController@index');
-Route::get('/servicos', 'App\Http\Controllers\SiteController@servicos');
-Route::get('/servico/{id}', 'App\Http\Controllers\SiteController@servico');
-Route::get('/sobre', 'App\Http\Controllers\SiteController@sobre');
-route::get('/saudacao/{nome?}', 'App\Http\Controllers\SiteController@saudacao');
+Route::get('/', [SiteController::class, 'index']);
+Route::get('/servicos', [SiteController::class, 'servico']);
+Route::get('/servico/{id}', [SiteController::class, 'servicos']);
+Route::get('/sobre', [SiteController::class, 'sobre']);
+route::get('/saudacao/{nome?}', Saudacao::class);

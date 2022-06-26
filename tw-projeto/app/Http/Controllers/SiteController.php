@@ -13,7 +13,7 @@ class SiteController extends Controller
     public function sobre(){
         echo 'mostrando sobre';
     }
-    
+
     public function servicos(){
         echo 'mostrando serviços';
     }
@@ -38,7 +38,5 @@ class SiteController extends Controller
         echo $servico[$id]['descricao'];
     }
 
-    public function saudacao(string $nome) {
-        echo "ola $nome";
-    }
+   
 }

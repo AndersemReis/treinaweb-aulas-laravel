@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class SiteController extends Controller
 {
     public function index(){
-        return view('welcome');
+        return view('home');
     }
 
     public function sobre(){
@@ -19,7 +19,7 @@ class SiteController extends Controller
     }
 
     public function servico(int $id) {
-        $servico = [
+        $servicos = [
             1=> [
                 'nome' => 'Lavagem de urso',
                 'descricao' => 'Descriçao muito longa'
@@ -33,9 +33,9 @@ class SiteController extends Controller
                 'descricao' => 'Descriçao curta'
             ],
         ];
-        echo $servico[$id]['nome'];
-        echo "<br>";
-        echo $servico[$id]['descricao'];
+        return view('servico', [
+            'servico'=> $servicos[$id]
+        ]);
     }
 
    

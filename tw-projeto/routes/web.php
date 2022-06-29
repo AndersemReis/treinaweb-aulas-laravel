@@ -16,7 +16,7 @@ use App\Http\Controllers\Saudacao;
 */
 
 Route::get('/', [SiteController::class, 'index']);
-Route::get('/servicos', [SiteController::class, 'servico']);
-Route::get('/servico/{id}', [SiteController::class, 'servicos']);
+Route::get('/servicos', [SiteController::class, 'servicos']);
+Route::get('/servico/{id}', [SiteController::class, 'servico']);
 Route::get('/sobre', [SiteController::class, 'sobre']);
 route::get('/saudacao/{nome?}', Saudacao::class);
